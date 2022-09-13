@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Contents/bootstrap-sortable.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/bootstrap-sortable.js"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/moment.min.js"></script>
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+
+      .thumbImg {
+        width: 100%;
+        max-width: 35px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        border-width: 1px;
+        border-color: #f1f1f1;
+        border-style: solid;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.7);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      .closeModal {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .closeModal:hover,
+      .closeModal:focus {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <span class="closeModal">&times;</span>
+      <img class="modal-content" id="modelImage">
+    </div>
+    <div class="container">
+
+      <h1 class="text-primary">TestCafe Test Summary</h1>
+      <div class="client-logo" style="padding:15px"></div>
+      <div class="bg-primary" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
+        <h3>Summary</h3><br>
+        <p class="lead">Start Time: Mon Sep 12 2022 19:07:04 GMT+0100 (British Summer Time)</p>
+        <p class="lead">Browsers: Chrome 105.0.0.0 / Windows 10</p>
+        <p class="lead">Duration: 2m 07s</p>
+        <p class="lead">Tests Failed: 0 out of 20</p>
+        <p class="lead">Tests Skipped: 0</p>
+      </div><br>
+      <table class="table sortable" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Fixture</th>
+            <th>Test Name</th>
+            <th>Browsers</th>
+            <th>Duration</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr class="success">
+  <td>1</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform Maximize and input test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>2</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform type and replace test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>3</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform click check box test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>4</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform check radio button test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>4s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>5</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform press key test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>6</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform select text test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>7</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform hovering test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>8</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform nativagation to other url test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>9</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform scrennshot action test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>10</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform selecting from a list test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>11</td>
+  <td>Test Cafe Actions test</td>
+  <td>Perform get text test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>12</td>
+  <td>Home Page</td>
+  <td>Loading home Page</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>13</td>
+  <td>Login Page</td>
+  <td>Loading Login Page</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>2s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>14</td>
+  <td>Login Page</td>
+  <td>Successful Login - Valid credential</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>19s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>15</td>
+  <td>Login Page</td>
+  <td>Unsuccessful Login - Invalid Username</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>16</td>
+  <td>Login Page</td>
+  <td>Unsuccessful Login - Invalid Password</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>17</td>
+  <td>Test Cafe Sample test</td>
+  <td>My first TestCafe test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>3s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>18</td>
+  <td>Test Cafe Sample test</td>
+  <td>My second TestCafe test</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>3s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>19</td>
+  <td>Login functionality</td>
+  <td>Negative login scenario test - Invalid credentials</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>20</td>
+  <td>Login functionality</td>
+  <td>Positive login scenario test - Valid credentials</td>
+  <td>Chrome 105.0.0.0 / Windows 10</td>
+  <td>5s</td>
+  <td>passed</td>
+ </tr>
+
+        </tbody>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+      <br>
+      <h3>Error Details</h3>
+      
+    </div>
+    <script>
+      const modal = document.getElementById('myModal');
+      const modalImage = document.getElementById("modelImage");
+
+      Array.from(document.getElementsByClassName("thumbImg")).forEach(function(el) {
+        el.onclick = function() {
+          modal.style.display = "block";
+          modalImage.src = this.src;
+        }
+      });
+
+      document.getElementsByClassName("closeModal")[0].onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+  <br>
+</html>

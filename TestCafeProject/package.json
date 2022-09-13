@@ -1,0 +1,20 @@
+{
+  "name": "testcafeproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:pom": "testcafe chrome Tests/POM_Framework/PageObjectRepo/tests/*.js --skip.js.errors",
+    "test:cafeTestWithReport_HTML": "testcafe chrome Tests/POM_Framework/PageObjectRepo/tests/*.js --reporter html:TestResults.html --skip.js.errors",
+    "test:chromeTestHeadless": "testcafe chrome:headless Tests/POM_Framework/PageObjectRepo/tests/*.js --skip.js.errors",
+    "test:emulateDevice": "testcafe chrome:emulation:device=iphone X Tests/POM_Framework/PageObjectRepo/tests/*.js --skip.js.errors"
+  },
+  "author": "Ola Oladeni",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^2.0.0"
+  },
+  "dependencies": {
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}
